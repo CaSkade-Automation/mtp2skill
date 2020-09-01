@@ -17,7 +17,7 @@ import be.ugent.rml.store.RDF4JStore;
 
 public class RmlTest {
 
-	public static void main(String[] args) {
+	public void executeRmlMapping(String rmlOutputFilePath) {
 		 try {
 	            String mapPath = "./src/main/resources/mapping.ttl"; //path to the mapping file that needs to be executed
 	            File mappingFile = new File(mapPath);
@@ -47,7 +47,7 @@ public class RmlTest {
 	            QuadStore result = executor.execute(null);
 
 	            // Output the result
-	           File outFile = new File("src/main/resources/Output/MappingOutput.ttl");
+	           File outFile = new File(rmlOutputFilePath);
 	            FileWriter fw = new FileWriter(outFile);
 	          BufferedWriter out = new BufferedWriter(fw);
 	          result.write(out, "turtle");
