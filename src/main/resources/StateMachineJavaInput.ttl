@@ -22,188 +22,188 @@
 @prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#>.
 @prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
 
-MTPOWL:_Replace_ServiceStateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
+MTPOWL:_Replace_StateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
 
-MTPOWL:_Replace_ServiceStateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
+MTPOWL:_Replace_StateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Aborting_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Aborting_State_Complete .
 
-MTPOWL:_Replace_ServiceStateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
+MTPOWL:_Replace_StateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Clearing_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Clearing_State_Complete .
 
-MTPOWL:_Replace_ServiceStateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
+MTPOWL:_Replace_StateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Reset_Command, MTPOWL:_Replace_ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Reset_Command, MTPOWL:_Replace_StateMachine_Stop_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
+MTPOWL:_Replace_StateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Completing_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Completing_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
+MTPOWL:_Replace_StateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Execute_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Hold_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stop_Command, MTPOWL:_Replace_ServiceStateMachine_Suspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Execute_State_Complete, MTPOWL:_Replace_StateMachine_Hold_Command,
+    MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Suspend_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
+MTPOWL:_Replace_StateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Holding_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Holding_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
+MTPOWL:_Replace_StateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Resetting_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Resetting_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
+MTPOWL:_Replace_StateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Starting_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Starting_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
+MTPOWL:_Replace_StateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stopping_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Stopping_State_Complete .
 
-MTPOWL:_Replace_ServiceStateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
+MTPOWL:_Replace_StateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stop_Command, MTPOWL:_Replace_ServiceStateMachine_Suspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Suspending_State_Complete .
 
-MTPOWL:_Replace_ServiceStateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
+MTPOWL:_Replace_StateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stop_Command, MTPOWL:_Replace_ServiceStateMachine_Unholding_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Unholding_State_Complete .
 
-MTPOWL:_Replace_ServiceStateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
+MTPOWL:_Replace_StateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stop_Command, MTPOWL:_Replace_ServiceStateMachine_Unsuspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Unsuspending_State_Complete .
 
-MTPOWL:_Replace_ServiceStateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
+MTPOWL:_Replace_StateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Clear_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Clear_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
+MTPOWL:_Replace_StateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stop_Command, MTPOWL:_Replace_ServiceStateMachine_Un_Hold_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Un_Hold_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
+MTPOWL:_Replace_StateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Start_Command, MTPOWL:_Replace_ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Start_Command, MTPOWL:_Replace_StateMachine_Stop_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
+MTPOWL:_Replace_StateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Reset_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Reset_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
+MTPOWL:_Replace_StateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stop_Command, MTPOWL:_Replace_ServiceStateMachine_Unsuspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Unsuspend_Command .
 
-MTPOWL:_Replace_ServiceStateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
+MTPOWL:_Replace_StateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Aborting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Aborting .
 
-MTPOWL:_Replace_ServiceStateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
+MTPOWL:_Replace_StateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Clearing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Clearing .
 
-MTPOWL:_Replace_ServiceStateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
+MTPOWL:_Replace_StateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Holding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Holding .
 
-MTPOWL:_Replace_ServiceStateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
+MTPOWL:_Replace_StateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Resetting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Resetting .
 
-MTPOWL:_Replace_ServiceStateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
+MTPOWL:_Replace_StateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Starting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Starting .
 
-MTPOWL:_Replace_ServiceStateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
+MTPOWL:_Replace_StateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Stopping .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Stopping .
 
-MTPOWL:_Replace_ServiceStateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
+MTPOWL:_Replace_StateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Suspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Suspending .
 
-MTPOWL:_Replace_ServiceStateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
+MTPOWL:_Replace_StateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Unholding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Unholding .
 
-MTPOWL:_Replace_ServiceStateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
+MTPOWL:_Replace_StateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Unsuspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Unsuspending .
 
-MTPOWL:_Replace_ServiceStateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
+MTPOWL:_Replace_StateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Aborted .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Aborted .
 
-MTPOWL:_Replace_ServiceStateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
+MTPOWL:_Replace_StateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Stopped .
 
-MTPOWL:_Replace_ServiceStateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
+MTPOWL:_Replace_StateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Complete .
 
-MTPOWL:_Replace_ServiceStateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
+MTPOWL:_Replace_StateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Completing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Completing .
 
-MTPOWL:_Replace_ServiceStateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
+MTPOWL:_Replace_StateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Held .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Held .
 
-MTPOWL:_Replace_ServiceStateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
+MTPOWL:_Replace_StateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Idle .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Idle .
 
-MTPOWL:_Replace_ServiceStateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
+MTPOWL:_Replace_StateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Execute .
 
-MTPOWL:_Replace_ServiceStateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
+MTPOWL:_Replace_StateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Stopped .
 
-MTPOWL:_Replace_ServiceStateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
+MTPOWL:_Replace_StateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Suspended .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Suspended .
 
-MTPOWL:_Replace_ServiceStateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
+MTPOWL:_Replace_StateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Execute .
 
-MTPOWL:_Replace_ServiceStateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
+MTPOWL:_Replace_StateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Execute .
 
-MTPOWL:_Replace_ServiceStateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
-    MTPOWL:_Replace_ServiceStateMachine_Aborted, MTPOWL:_Replace_ServiceStateMachine_Aborting, MTPOWL:_Replace_ServiceStateMachine_Clearing,
-    MTPOWL:_Replace_ServiceStateMachine_Complete, MTPOWL:_Replace_ServiceStateMachine_Completing,
-    MTPOWL:_Replace_ServiceStateMachine_Execute, MTPOWL:_Replace_ServiceStateMachine_Held, MTPOWL:_Replace_ServiceStateMachine_Holding,
-    MTPOWL:_Replace_ServiceStateMachine_Idle, MTPOWL:_Replace_ServiceStateMachine_Resetting, MTPOWL:_Replace_ServiceStateMachine_Starting,
-    MTPOWL:_Replace_ServiceStateMachine_Stopped, MTPOWL:_Replace_ServiceStateMachine_Stopping, MTPOWL:_Replace_ServiceStateMachine_Suspended,
-    MTPOWL:_Replace_ServiceStateMachine_Suspending, MTPOWL:_Replace_ServiceStateMachine_Unholding,
-    MTPOWL:_Replace_ServiceStateMachine_Unsuspending;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:_Replace_ServiceStateMachine_Abort_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Aborting_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Clear_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Clearing_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Completing_State_Complete,
-    MTPOWL:_Replace_ServiceStateMachine_Execute_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Hold_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Holding_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Reset_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Resetting_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Start_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Starting_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Stop_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Stopping_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Suspend_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Suspending_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Un_Hold_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Unholding_State_Complete, MTPOWL:_Replace_ServiceStateMachine_Unsuspend_Command,
-    MTPOWL:_Replace_ServiceStateMachine_Unsuspending_State_Complete .
+MTPOWL:_Replace_StateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
+    MTPOWL:_Replace_StateMachine_Aborted, MTPOWL:_Replace_StateMachine_Aborting, MTPOWL:_Replace_StateMachine_Clearing,
+    MTPOWL:_Replace_StateMachine_Complete, MTPOWL:_Replace_StateMachine_Completing,
+    MTPOWL:_Replace_StateMachine_Execute, MTPOWL:_Replace_StateMachine_Held, MTPOWL:_Replace_StateMachine_Holding,
+    MTPOWL:_Replace_StateMachine_Idle, MTPOWL:_Replace_StateMachine_Resetting, MTPOWL:_Replace_StateMachine_Starting,
+    MTPOWL:_Replace_StateMachine_Stopped, MTPOWL:_Replace_StateMachine_Stopping, MTPOWL:_Replace_StateMachine_Suspended,
+    MTPOWL:_Replace_StateMachine_Suspending, MTPOWL:_Replace_StateMachine_Unholding,
+    MTPOWL:_Replace_StateMachine_Unsuspending;
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:_Replace_StateMachine_Abort_Command,
+    MTPOWL:_Replace_StateMachine_Aborting_State_Complete, MTPOWL:_Replace_StateMachine_Clear_Command,
+    MTPOWL:_Replace_StateMachine_Clearing_State_Complete, MTPOWL:_Replace_StateMachine_Completing_State_Complete,
+    MTPOWL:_Replace_StateMachine_Execute_State_Complete, MTPOWL:_Replace_StateMachine_Hold_Command,
+    MTPOWL:_Replace_StateMachine_Holding_State_Complete, MTPOWL:_Replace_StateMachine_Reset_Command,
+    MTPOWL:_Replace_StateMachine_Resetting_State_Complete, MTPOWL:_Replace_StateMachine_Start_Command,
+    MTPOWL:_Replace_StateMachine_Starting_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command,
+    MTPOWL:_Replace_StateMachine_Stopping_State_Complete, MTPOWL:_Replace_StateMachine_Suspend_Command,
+    MTPOWL:_Replace_StateMachine_Suspending_State_Complete, MTPOWL:_Replace_StateMachine_Un_Hold_Command,
+    MTPOWL:_Replace_StateMachine_Unholding_State_Complete, MTPOWL:_Replace_StateMachine_Unsuspend_Command,
+    MTPOWL:_Replace_StateMachine_Unsuspending_State_Complete .

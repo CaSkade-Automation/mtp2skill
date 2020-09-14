@@ -76,7 +76,7 @@
 	rr:predicateObjectMap [
     rr:predicate Cap:hasStateMachine;
     rr:objectMap [
-	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}_StateMachine";
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}StateMachine";
 	rr:class ISA88:StateMachine
 		]].
 
@@ -502,7 +502,7 @@
 	rr:predicateObjectMap [
     rr:predicate Cap:hasCurrentState;
     rr:objectMap [
-	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}_StateMachine_Idle";
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}StateMachine_Idle";
 	rr:class ISA88:Idle
 	]];
 	

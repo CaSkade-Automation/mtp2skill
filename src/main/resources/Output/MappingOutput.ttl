@@ -39,7 +39,7 @@
     <http://www.hsu-ifa.de/ontologies/MTPOWL#WQC_PLC_PRG.Entleeren_Service.Entleeren_Prozedur_1.HealthStateViewInstance>;
   <http://www.hsu-ifa.de/ontologies/capability-model#hasSkillParameter> <http://www.hsu-ifa.de/ontologies/MTPOWL#CommandExt_PLC_PRG.Entleeren_Service>,
     <http://www.hsu-ifa.de/ontologies/MTPOWL#ProcedureExt_PLC_PRG.Entleeren_Service>;
-  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Entleeren_Prozedur_1_StateMachine> .
+  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Entleeren_Prozedur_1StateMachine> .
 
 <http://www.hsu-ifa.de/ontologies/MTPOWL#L_B1_Oben_1.L_B1_Oben_FB> a <http://www.hsu-ifa.de/ontologies/VDI2206#Sensor>;
   <http://www.hsu-ifa.de/ontologies/VDI2206#ComponentIsPartOfModule> <http://www.hsu-ifa.de/ontologies/MTPOWL#MTP_Filter.%280.0.0.0%29> .
@@ -126,7 +126,7 @@
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VUnit_PLC_PRG.Mischen_Service.Mischen_Prozedur_1.Anteil_Fl1>,
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VUnit_PLC_PRG.Mischen_Service.Mischen_Prozedur_1.Anteil_Fl2>,
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VUnit_PLC_PRG.Mischen_Service.Mischen_Prozedur_1.Anteil_Fl3>;
-  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Mischen_Prozedur_1_StateMachine> .
+  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Mischen_Prozedur_1StateMachine> .
 
 <http://www.hsu-ifa.de/ontologies/MTPOWL#Mischen_Prozedur_2> a <http://www.hsu-ifa.de/ontologies/OpcUa#OpcUaSkill>,
     <http://www.hsu-ifa.de/ontologies/OpcUa/1.0.0#OpcUaSkill>;
@@ -170,7 +170,7 @@
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VUnit_PLC_PRG.Mischen_Service.Mischen_Prozedur_2.Anteil_Fl1>,
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VUnit_PLC_PRG.Mischen_Service.Mischen_Prozedur_2.Anteil_Fl2>,
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VUnit_PLC_PRG.Mischen_Service.Mischen_Prozedur_2.Anteil_Fl3>;
-  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Mischen_Prozedur_2_StateMachine> .
+  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Mischen_Prozedur_2StateMachine> .
 
 <http://www.hsu-ifa.de/ontologies/MTPOWL#Mixer_1.Mixer_Fb> a <http://www.hsu-ifa.de/ontologies/VDI2206#Actuator>;
   <http://www.hsu-ifa.de/ontologies/VDI2206#ComponentIsPartOfModule> <http://www.hsu-ifa.de/ontologies/MTPOWL#MTP_Filter.%280.0.0.0%29> .
@@ -352,7 +352,7 @@
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VMax_PLC_PRG.Ruehren_Service.Ruehrzeit>,
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VMin_PLC_PRG.Ruehren_Service.Ruehrzeit>,
     <http://www.hsu-ifa.de/ontologies/MTPOWL#VUnit_PLC_PRG.Ruehren_Service.Ruehrzeit>;
-  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Ruehren_Prozedur_1_StateMachine> .
+  <http://www.hsu-ifa.de/ontologies/capability-model#hasStateMachine> <http://www.hsu-ifa.de/ontologies/MTPOWL#Ruehren_Prozedur_1StateMachine> .
 
 <http://www.hsu-ifa.de/ontologies/MTPOWL#VExt_PLC_PRG.Mischen_Service.Fuellmenge>
   a <http://www.hsu-ifa.de/ontologies/OpcUa/1.0.0#UAVariable>;
@@ -749,191 +749,191 @@
 @prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#>.
 @prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
+MTPOWL:Mischen_Prozedur_1StateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborting_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Aborting_State_Complete .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clearing_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Clearing_State_Complete .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Reset_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Reset_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Completing_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Completing_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Hold_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Hold_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Suspend_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopping_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stopping_State_Complete .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Suspending_State_Complete .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unholding_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Unholding_State_Complete .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspending_State_Complete .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clear_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Clear_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Un_Hold_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Un_Hold_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Start_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Start_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Reset_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Reset_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspend_Command .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Aborting .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clearing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Clearing .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Holding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Holding .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Resetting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Resetting .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Starting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Starting .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopping .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Stopping .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Suspending .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unholding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Unholding .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspending .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborted .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Aborted .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Stopped .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Complete .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Completing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Completing .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Held .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Held .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Idle .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Idle .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Stopped .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspended .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Suspended .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
+MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Mischen_Prozedur_1ServiceStateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborted, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborting, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clearing,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Completing,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Held, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Holding,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Idle, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Resetting, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Starting,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopped, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopping, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspended,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspending, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unholding,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspending;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Aborting_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clear_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Clearing_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Completing_State_Complete,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Hold_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Reset_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Start_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stop_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Stopping_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspend_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Suspending_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Un_Hold_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unholding_State_Complete, MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspend_Command,
-    MTPOWL:Mischen_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete .
+MTPOWL:Mischen_Prozedur_1StateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
+    MTPOWL:Mischen_Prozedur_1StateMachine_Aborted, MTPOWL:Mischen_Prozedur_1StateMachine_Aborting, MTPOWL:Mischen_Prozedur_1StateMachine_Clearing,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Completing,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Execute, MTPOWL:Mischen_Prozedur_1StateMachine_Held, MTPOWL:Mischen_Prozedur_1StateMachine_Holding,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Idle, MTPOWL:Mischen_Prozedur_1StateMachine_Resetting, MTPOWL:Mischen_Prozedur_1StateMachine_Starting,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stopped, MTPOWL:Mischen_Prozedur_1StateMachine_Stopping, MTPOWL:Mischen_Prozedur_1StateMachine_Suspended,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Suspending, MTPOWL:Mischen_Prozedur_1StateMachine_Unholding,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspending;
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Mischen_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Aborting_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Clear_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Clearing_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Completing_State_Complete,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Hold_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Reset_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Start_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Stop_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Stopping_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Suspend_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Suspending_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Un_Hold_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Unholding_State_Complete, MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspend_Command,
+    MTPOWL:Mischen_Prozedur_1StateMachine_Unsuspending_State_Complete .
 @prefix : <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
 @prefix Cap: <http://www.hsu-ifa.de/ontologies/capability-model#> .
 @prefix MTPOWL: <http://www.hsu-ifa.de/ontologies/capability-example#> .
@@ -958,191 +958,191 @@ MTPOWL:Mischen_Prozedur_1ServiceStateMachine <http://www.hsu-ifa.de/ontologies/I
 @prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#>.
 @prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
+MTPOWL:Mischen_Prozedur_2StateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborting_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Aborting_State_Complete .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clearing_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Clearing_State_Complete .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Reset_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Reset_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Completing_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Completing_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Hold_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Hold_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Suspend_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopping_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stopping_State_Complete .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Suspending_State_Complete .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unholding_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Unholding_State_Complete .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspending_State_Complete .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clear_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Clear_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Un_Hold_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Un_Hold_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Start_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Start_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Reset_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Reset_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command, MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspend_Command .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Aborting .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clearing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Clearing .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Holding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Holding .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Resetting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Resetting .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Starting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Starting .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopping .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Stopping .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Suspending .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unholding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Unholding .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspending .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborted .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Aborted .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Stopped .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Complete .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Completing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Completing .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Held .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Held .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Idle .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Idle .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Execute .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Stopped .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspended .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Suspended .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Execute .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
+MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Mischen_Prozedur_2StateMachine_Execute .
 
-MTPOWL:Mischen_Prozedur_2ServiceStateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborted, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborting, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clearing,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Completing,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Held, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Holding,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Idle, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Resetting, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Starting,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopped, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopping, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspended,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspending, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unholding,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspending;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Abort_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Aborting_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clear_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Clearing_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Completing_State_Complete,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Hold_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Reset_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Start_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stop_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Stopping_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspend_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Suspending_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Un_Hold_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unholding_State_Complete, MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspend_Command,
-    MTPOWL:Mischen_Prozedur_2ServiceStateMachine_Unsuspending_State_Complete .
+MTPOWL:Mischen_Prozedur_2StateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
+    MTPOWL:Mischen_Prozedur_2StateMachine_Aborted, MTPOWL:Mischen_Prozedur_2StateMachine_Aborting, MTPOWL:Mischen_Prozedur_2StateMachine_Clearing,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Completing,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Execute, MTPOWL:Mischen_Prozedur_2StateMachine_Held, MTPOWL:Mischen_Prozedur_2StateMachine_Holding,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Idle, MTPOWL:Mischen_Prozedur_2StateMachine_Resetting, MTPOWL:Mischen_Prozedur_2StateMachine_Starting,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stopped, MTPOWL:Mischen_Prozedur_2StateMachine_Stopping, MTPOWL:Mischen_Prozedur_2StateMachine_Suspended,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Suspending, MTPOWL:Mischen_Prozedur_2StateMachine_Unholding,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspending;
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Mischen_Prozedur_2StateMachine_Abort_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Aborting_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Clear_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Clearing_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Completing_State_Complete,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Execute_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Hold_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Holding_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Reset_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Resetting_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Start_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Starting_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Stop_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Stopping_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Suspend_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Suspending_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Un_Hold_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Unholding_State_Complete, MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspend_Command,
+    MTPOWL:Mischen_Prozedur_2StateMachine_Unsuspending_State_Complete .
 @prefix : <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
 @prefix Cap: <http://www.hsu-ifa.de/ontologies/capability-model#> .
 @prefix MTPOWL: <http://www.hsu-ifa.de/ontologies/capability-example#> .
@@ -1167,191 +1167,191 @@ MTPOWL:Mischen_Prozedur_2ServiceStateMachine <http://www.hsu-ifa.de/ontologies/I
 @prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#>.
 @prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
+MTPOWL:Ruehren_Prozedur_1StateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborting_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Aborting_State_Complete .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clearing_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Clearing_State_Complete .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Reset_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Reset_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Completing_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Completing_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Hold_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Execute_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Hold_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Suspend_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Holding_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Holding_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Resetting_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Resetting_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Starting_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Starting_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopping_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stopping_State_Complete .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Suspending_State_Complete .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unholding_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Unholding_State_Complete .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspending_State_Complete .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clear_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Clear_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Un_Hold_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Un_Hold_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Start_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Start_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Reset_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Reset_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspend_Command .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Aborting .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clearing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Clearing .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Holding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Holding .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Resetting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Resetting .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Starting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Starting .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopping .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Stopping .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Suspending .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unholding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Unholding .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspending .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborted .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Aborted .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Stopped .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Complete .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Completing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Completing .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Held .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Held .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Idle .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Idle .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Stopped .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspended .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Suspended .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
+MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Ruehren_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Ruehren_Prozedur_1ServiceStateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborted, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborting, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clearing,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Completing,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Held, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Holding,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Idle, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Resetting, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Starting,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopped, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopping, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspended,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspending, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unholding,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspending;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Aborting_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clear_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Clearing_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Completing_State_Complete,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Execute_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Hold_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Holding_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Reset_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Resetting_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Start_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Starting_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stop_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Stopping_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspend_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Suspending_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Un_Hold_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unholding_State_Complete, MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspend_Command,
-    MTPOWL:Ruehren_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete .
+MTPOWL:Ruehren_Prozedur_1StateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Aborted, MTPOWL:Ruehren_Prozedur_1StateMachine_Aborting, MTPOWL:Ruehren_Prozedur_1StateMachine_Clearing,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Completing,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Execute, MTPOWL:Ruehren_Prozedur_1StateMachine_Held, MTPOWL:Ruehren_Prozedur_1StateMachine_Holding,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Idle, MTPOWL:Ruehren_Prozedur_1StateMachine_Resetting, MTPOWL:Ruehren_Prozedur_1StateMachine_Starting,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stopped, MTPOWL:Ruehren_Prozedur_1StateMachine_Stopping, MTPOWL:Ruehren_Prozedur_1StateMachine_Suspended,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Suspending, MTPOWL:Ruehren_Prozedur_1StateMachine_Unholding,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspending;
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Ruehren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Aborting_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Clear_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Clearing_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Completing_State_Complete,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Execute_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Hold_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Holding_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Reset_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Resetting_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Start_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Starting_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Stop_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Stopping_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Suspend_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Suspending_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Un_Hold_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Unholding_State_Complete, MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspend_Command,
+    MTPOWL:Ruehren_Prozedur_1StateMachine_Unsuspending_State_Complete .
 @prefix : <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
 @prefix Cap: <http://www.hsu-ifa.de/ontologies/capability-model#> .
 @prefix MTPOWL: <http://www.hsu-ifa.de/ontologies/capability-example#> .
@@ -1376,188 +1376,188 @@ MTPOWL:Ruehren_Prozedur_1ServiceStateMachine <http://www.hsu-ifa.de/ontologies/I
 @prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#>.
 @prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
+MTPOWL:Entleeren_Prozedur_1StateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborting_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Aborting_State_Complete .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clearing_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Clearing_State_Complete .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Reset_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Reset_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Completing_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Completing_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Hold_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Execute_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Hold_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Suspend_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Holding_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Holding_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Resetting_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Resetting_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Starting_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Starting_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopping_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stopping_State_Complete .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Suspending_State_Complete .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unholding_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Unholding_State_Complete .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspending_State_Complete .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clear_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Clear_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Un_Hold_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Un_Hold_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Start_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Start_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Reset_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Reset_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspend_Command .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command, MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspend_Command .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Aborting .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clearing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Clearing .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Holding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Holding .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Resetting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Resetting .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Starting .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Starting .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopping .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Stopping .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Suspending .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unholding .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Unholding .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspending .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspending .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborted .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Aborted .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Clearing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Stopped .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Completing_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Complete .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Complete .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Execute_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Completing .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Completing .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Holding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Held .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Held .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Resetting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Idle .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Idle .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Starting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Stopping_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopped .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Stopped .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Suspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspended .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Suspended .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Unholding_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
+MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspending_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending_State_Complete>,
     owl:NamedIndividual;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute .
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:Entleeren_Prozedur_1StateMachine_Execute .
 
-MTPOWL:Entleeren_Prozedur_1ServiceStateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborted, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborting, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clearing,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Completing,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Held, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Holding,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Idle, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Resetting, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Starting,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopped, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopping, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspended,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspending, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unholding,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspending;
-  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Abort_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Aborting_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clear_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Clearing_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Completing_State_Complete,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Execute_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Hold_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Holding_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Reset_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Resetting_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Start_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Starting_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stop_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Stopping_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspend_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Suspending_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Un_Hold_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unholding_State_Complete, MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspend_Command,
-    MTPOWL:Entleeren_Prozedur_1ServiceStateMachine_Unsuspending_State_Complete .
+MTPOWL:Entleeren_Prozedur_1StateMachine <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasState>
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Aborted, MTPOWL:Entleeren_Prozedur_1StateMachine_Aborting, MTPOWL:Entleeren_Prozedur_1StateMachine_Clearing,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Completing,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Execute, MTPOWL:Entleeren_Prozedur_1StateMachine_Held, MTPOWL:Entleeren_Prozedur_1StateMachine_Holding,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Idle, MTPOWL:Entleeren_Prozedur_1StateMachine_Resetting, MTPOWL:Entleeren_Prozedur_1StateMachine_Starting,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stopped, MTPOWL:Entleeren_Prozedur_1StateMachine_Stopping, MTPOWL:Entleeren_Prozedur_1StateMachine_Suspended,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Suspending, MTPOWL:Entleeren_Prozedur_1StateMachine_Unholding,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspending;
+  <http://www.hsu-ifa.de/ontologies/ISA-TR88#hasTransition> MTPOWL:Entleeren_Prozedur_1StateMachine_Abort_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Aborting_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Clear_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Clearing_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Completing_State_Complete,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Execute_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Hold_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Holding_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Reset_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Resetting_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Start_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Starting_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Stop_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Stopping_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Suspend_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Suspending_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Un_Hold_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Unholding_State_Complete, MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspend_Command,
+    MTPOWL:Entleeren_Prozedur_1StateMachine_Unsuspending_State_Complete .
