@@ -1,41 +1,46 @@
 import org.w3c.dom.*;
+import org.xml.sax.SAXException;
+
 import javax.xml.xpath.*;
 import javax.xml.parsers.*;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import org.xml.sax.SAXException;
 
 public class XPathReplace {
 	static String inputFilename = "src/main/resources/StateMachineJavaInput.ttl";
 	static String outputFilename = "src/main/resources/Output/MappingOutput.ttl";
 	static String pattern = "_Replace_";
 
-	public static void main(String[] args) {
+	public void executeMapping(String xmlFile) {
+
+		// overwrite existing xml file which should be mapped
+		writeFile(xmlFile, "./src/main/resources/Manifest_Mischmodul.xml", false);
 
 		// 1. Execute RML mapping
 		RmlTest rmlMapper = new RmlTest();
 		rmlMapper.executeRmlMapping(outputFilename);
-		
+
 		// 2. Get state machines with replaced names
 		String stateMachines = getNodeNameAndValue();
-		
+
 		// 3. Append statemachines to rml mapping
-		 try { 
-			  
-	            // Open given file in append mode. 
-	            BufferedWriter out = new BufferedWriter( 
-	                   new FileWriter(outputFilename, true)); 
-	            out.write(stateMachines); 
-	            out.close(); 
-	        } 
-	        catch (IOException e) { 
-	            System.out.println("exception occoured" + e); 
-	        } 
+		writeFile(stateMachines, outputFilename, true);
 	}
 
-	private static String getNodeNameAndValue() {
+	public void writeFile(String file, String filePath, boolean append) {
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, append));
+			writer.write(file);
+			writer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private String getNodeNameAndValue() {
 
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
 
@@ -51,7 +56,7 @@ public class XPathReplace {
 			e.printStackTrace();
 		}
 		XPath xpath = XPathFactory.newInstance().newXPath();
-		
+
 		XPathExpression expr;
 		Object result = null;
 
@@ -69,8 +74,9 @@ public class XPathReplace {
 		String stateMachines = "";
 		for (int i = 0; i < nodes.getLength(); i++) {
 			String nodename = nodes.item(i).getNodeValue();
-			stateMachines += ReplaceStateMachine.replaceString(XPathReplace.pattern, nodename, XPathReplace.inputFilename); // call
-																											// term
+			stateMachines += ReplaceStateMachine.replaceString(XPathReplace.pattern, nodename,
+					XPathReplace.inputFilename); // call
+			// term
 		}
 		return stateMachines;
 	}
