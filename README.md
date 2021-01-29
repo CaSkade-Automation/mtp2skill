@@ -18,7 +18,15 @@ Within this project several input files are needed:
 These files must be located in the path /src/main/resources/. 
 If you want to map a different MTP than the example , the file name of the MTP must be adjusted in /src/main/java/XPathReplace.java in line 49.
 
-The output of the mapping can be taken from the path /src/main/resources/Output/MappingOutput.ttl.
 
 Within the mapping script, the file path of the MTP must also be adjusted for each TripleMap in the rml:source.
 
+The three java classes that are needed are: 
+ReplaceStateMachine.java
+RMLTest.java
+XPathReplace.java
+
+These files must be located in the path /src/main/java/.
+
+To execute the mapping, the main method of the XPathReplace.java class must be executed.
+The output of the mapping can be taken from the path /src/main/resources/Output/MappingOutput.ttl.
