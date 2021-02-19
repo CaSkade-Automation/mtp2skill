@@ -25,9 +25,9 @@
 	</repositories>
 	<dependencies>
 		<dependency>
-			<groupId>com.github.RMLio</groupId>
-			<artifactId>rmlmapper-java</artifactId>
-			<version>4.8.2</version>
+			<groupId>be.ugent.rml</groupId>
+			<artifactId>rmlmapper</artifactId>
+			<version>4.9.1</version>
 		</dependency>
 	</dependencies>
 </project>
