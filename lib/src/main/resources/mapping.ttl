@@ -25,10 +25,10 @@
   ];	
   
   rr:predicateObjectMap [
-    rr:predicate Cap:providesOpcUaSkill;
+    rr:predicate Cap:providesOpcUaVariableSkill;
     rr:objectMap [
 	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{/CAEXFile/InstanceHierarchy/InternalElement/InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
 	]];
 
   	rr:predicateObjectMap [
@@ -56,7 +56,7 @@
     rr:predicate Cap:isExecutableViaOpcUaSkill;
     rr:objectMap [
 	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{./child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
 	]].
 
 
@@ -69,7 +69,7 @@
 
   rr:subjectMap [
     rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
   ];		
   
   
@@ -80,18 +80,7 @@
 	rr:class ISA88:StateMachine
 		]].
 
-@prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
-@prefix crml:   <http://semweb.mmlab.be/ns/crml#>.
-@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
-@prefix ex: <http://ex.com/>.
-@prefix VDI2206: <http://www.hsu-ifa.de/ontologies/VDI2206#>.
-@prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#>.
-@prefix DINEN61360: <http://www.hsu-ifa.de/ontologies/DINEN61360#>.
-@prefix OPCUA: <http://www.hsu-ifa.de/ontologies/OpcUa/1.0.0#>.
-@prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA88-TR#>.
-@prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
-@base <http://example.com/base>.
+
 
 <#DefinitionProzess>
  a rr:TriplesMap;
@@ -119,18 +108,7 @@
 	rr:class VDI3682:Process
 	]].
 	
-@prefix rr: <http://www.w3.org/ns/r2rml#>.
-@prefix rml: <http://semweb.mmlab.be/ns/rml#>.
-@prefix crml:   <http://semweb.mmlab.be/ns/crml#>.
-@prefix ql: <http://semweb.mmlab.be/ns/ql#>.
-@prefix ex: <http://ex.com/>.
-@prefix VDI2206: <http://www.hsu-ifa.de/ontologies/VDI2206#>.
-@prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#>.
-@prefix DINEN61360: <http://www.hsu-ifa.de/ontologies/DINEN61360#>.
-@prefix OPCUA: <http://www.hsu-ifa.de/ontologies/OpcUa/1.0.0#>.
-@prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA88-TR#>.
-@prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
-@base <http://example.com/base>.
+
 
 <#ModulhatSensorenundAktoren>
  a rr:TriplesMap;
@@ -486,7 +464,7 @@
 	
 	
 
-<#DefinitionSkills+CommandExt>
+<#DefinitionSkills+CommandExt+StateCur>
  a rr:TriplesMap;
   rml:logicalSource [
     rml:source "${XMLFileToMap}";
@@ -495,7 +473,7 @@
 
   rr:subjectMap [
     rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
   ];	
   
   
@@ -507,18 +485,31 @@
 	]];
 	
 	rr:predicateObjectMap [
-    rr:predicate Cap:hasSkillParameter;
+    rr:predicate Cap:hasSkillCommand;
     rr:objectMap [
 	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='CommandExt']/@Name}_{parent::InternalElement/@Name}";
-	rr:class OPCUA:UAVariable
+	rr:class Cap:SkillCommand
 	]];
 	
+	rr:predicateObjectMap [
+    rr:predicate Cap:hasCurrentStateOutput;
+    rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/@Name}_{parent::InternalElement/@Name}";
+	rr:class Cap:CurrentStateOutput
+	]];
 	
   	rr:predicateObjectMap [
     rr:predicate OPCUA:organizes;
     rr:objectMap [
 	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='CommandExt']/@Name}_{parent::InternalElement/@Name}";
-	rr:class OPCUA:UAVariable
+	rr:class Cap:SkillCommand
+	]];
+
+rr:predicateObjectMap [
+    rr:predicate OPCUA:organizes;
+    rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/@Name}_{parent::InternalElement/@Name}";
+	rr:class Cap:CurrentStateOutput
 	]].	
 
 
@@ -531,7 +522,7 @@
 
   rr:subjectMap [
     rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
   ];	
   
   rr:predicateObjectMap [
@@ -610,6 +601,211 @@
 	rr:datatype xsd:strg
 	]].
 
+<#DefinitionDEvonCommandExt>
+ a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "${XMLFileToMap}";
+    rml:referenceFormulation ql:XPath;
+    rml:iterator "//InternalElement/Attribute[Value=//InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='CommandExt']"];
+
+	rr:subjectMap [
+    rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}_{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/@Name}";
+	rr:class Cap:SkillCommand
+	];
+
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Abort_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Clear_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Hold_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];	
+
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Reset_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];	
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Start_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Stop_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Suspend_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Un_Hold_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Unsuspend_Command_DE";
+	rr:class DINEN61360:Data_Element
+	]].
+
+<#DefinitionDEvonStateCur>
+ a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "${XMLFileToMap}";
+    rml:referenceFormulation ql:XPath;
+    rml:iterator "//InternalElement/Attribute[Value=//InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']"];
+
+	rr:subjectMap [
+    rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}_{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/@Name}";
+	rr:class Cap:CurrentStateOutput
+	];
+
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Aborting_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Clearing_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Complete_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];	
+
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Completing_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];	
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Execute_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Holding_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Resetting_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Starting_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Stopping_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Suspending_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Unholding_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Unsuspending_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Aborted_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Held_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Idle_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Stopped_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+ 	rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[@Name='RefID'][Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']/@Name}Suspended_CurrentState_DE";
+	rr:class DINEN61360:Data_Element
+	]].
 	
 <#DefinitionCommandExt>
  a rr:TriplesMap;
@@ -620,15 +816,19 @@
 
 	rr:subjectMap [
     rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='CommandExt']/@Name}_{parent::InternalElement/@Name}";
-	rr:class OPCUA:UAVariable
+	rr:class Cap:SkillCommand
 	];
 
+
+
+	
 	rr:predicateObjectMap [
     rr:predicate Cap:hasVariableName;
     rr:objectMap [
 	rr:template "{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='CommandExt']/@Name}_{parent::InternalElement/@Name}";
 	rr:datatype xsd:strg
 	]];
+	
 	
 	rr:predicateObjectMap [
     rr:predicate OPCUA:nodeId;
@@ -659,12 +859,92 @@
 	]];
 	
 	rr:predicateObjectMap [
+    rr:predicate DINEN61360:has_Type_Description;
+    rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/capability-model#SkillCommandVariable_TD";
+	rr:class DINEN61360:Type_Description
+	]];
+	
+	rr:predicateObjectMap [
     rr:predicate OPCUA:nodeNamespace;
     rr:objectMap [
 	rr:template "{//ExternalInterface[@ID=//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='CommandExt']/Value]/Attribute[@Name='Namespace']/Value}";
 	rr:datatype xsd:strg
 	]].
-  
+ 
+
+<#DefinitionStateCur>
+ a rr:TriplesMap;
+  rml:logicalSource [
+    rml:source "${XMLFileToMap}";
+    rml:referenceFormulation ql:XPath;
+    rml:iterator "/CAEXFile/InstanceHierarchy/InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/Service']/child::InternalElement[@RefBaseSystemUnitPath='MTPServiceSUCLib/ServiceProcedure']" ];
+
+	rr:subjectMap [
+    rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/@Name}_{parent::InternalElement/@Name}";
+	rr:class Cap:CurrentStateOutput
+	];
+
+
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:is_Instance_Description_of_Data_Element;
+    rr:objectMap [
+	rr:template "{@Name[Value=//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/Value]}_{Abort_Command_DE}";
+	rr:class DINEN61360:Data_Element
+	]];
+	
+	
+	rr:predicateObjectMap [
+    rr:predicate Cap:hasVariableName;
+    rr:objectMap [
+	rr:template "{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/@Name}_{parent::InternalElement/@Name}";
+	rr:datatype xsd:strg
+	]];
+	
+	
+	rr:predicateObjectMap [
+    rr:predicate OPCUA:nodeId;
+    rr:objectMap [
+	rr:template "{//ExternalInterface[@ID=//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/Value]/Attribute[@Name='Identifier']/Value}";
+	rr:datatype xsd:strg
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate OPCUA:hasDefaultValue;
+    rr:objectMap [
+	rr:template "{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/DefaultValue}";
+	rr:datatype xsd:strg
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate Cap:hasVariableType;
+    rr:objectMap [
+	rr:template "{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/@AttributeDataType}";
+	rr:datatype xsd:strg
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate Cap:isRequired;
+    rr:objectMap [
+	rr:template "FALSE";
+	rr:datatype xsd:strg
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate DINEN61360:has_Type_Description;
+    rr:objectMap [
+	rr:template "http://www.hsu-ifa.de/ontologies/capability-model#CurrentStateOutput_TD";
+	rr:class DINEN61360:Type_Description
+	]];
+	
+	rr:predicateObjectMap [
+    rr:predicate OPCUA:nodeNamespace;
+    rr:objectMap [
+	rr:template "{//ExternalInterface[@ID=//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='StateCur']/Value]/Attribute[@Name='Namespace']/Value}";
+	rr:datatype xsd:strg
+	]].
+
+	
 <#DefinitionProcedureCur>
  a rr:TriplesMap;
   rml:logicalSource [
@@ -782,7 +1062,7 @@
 
   rr:subjectMap [
     rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
   ];	
   
 	rr:predicateObjectMap [
@@ -852,7 +1132,7 @@
 
   rr:subjectMap [
     rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
   ];	
   
 	rr:predicateObjectMap [
@@ -920,7 +1200,7 @@
 
   rr:subjectMap [
     rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{@Name}";
-	rr:class OPCUA:OpcUaSkill
+	rr:class Cap:OpcUaVariableSkill
   ];	
   
 	rr:predicateObjectMap [
@@ -1589,7 +1869,7 @@
     rr:predicate OPCUA:containsNode;
     rr:objectMap [
 	rr:template "http://www.hsu-ifa.de/ontologies/MTPOWL#{//InternalElement/Attribute[Value=current()/parent::InternalElement/Attribute[@Name='RefID']/Value]/parent::InternalElement/Attribute[@Name='CommandExt']/@Name}_{parent::InternalElement/@Name}";
-	rr:class OPCUA:UAVariable
+	rr:class Cap:SkillCommand
 	]];
 	
 	rr:predicateObjectMap [

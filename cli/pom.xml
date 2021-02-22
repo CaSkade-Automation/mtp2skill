@@ -2,16 +2,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>de.hsu-hh.ifa.mtp-mapping</groupId>
-		<artifactId>Parent-Project</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>Console</artifactId>
-	<properties>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
+
+	<artifactId>cli</artifactId>
+
 	<dependencies>
 		<dependency>
 			<groupId>commons-cli</groupId>
@@ -20,12 +19,20 @@
 		</dependency>
 		<dependency>
 			<groupId>de.hsu-hh.ifa.mtp-mapping</groupId>
-			<artifactId>Mapping</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<artifactId>lib</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<release>11</release>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -41,7 +48,7 @@
 							<archive>
 								<manifest>
 									<addClasspath>true</addClasspath>
-									<mainClass>console.Main</mainClass>
+									<mainClass>cli.Main</mainClass>
 								</manifest>
 							</archive>
 							<descriptorRefs>
