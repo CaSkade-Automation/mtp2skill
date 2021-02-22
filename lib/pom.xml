@@ -2,27 +2,20 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
 	<parent>
 		<groupId>de.hsu-hh.ifa.mtp-mapping</groupId>
-		<artifactId>Parent-Project</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
 	</parent>
-	<artifactId>Mapping</artifactId>
+	
+	<artifactId>lib</artifactId>
 	<name>MTP-to-Skill</name>
+	
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
-	<repositories>
-		<repository>
-			<id>repo.maven.apache.org</id>
-			<url>https://repo.maven.apache.org/maven2/</url>
-		</repository>
-		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
-		</repository>
-	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>be.ugent.rml</groupId>
