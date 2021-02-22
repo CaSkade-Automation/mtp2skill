@@ -1,9 +1,9 @@
 package mapping;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.InputStream;
+import java.io.StringWriter;
+import java.io.Writer;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,38 +21,36 @@ import be.ugent.rml.term.Literal;
 import be.ugent.rml.term.NamedNode;
 import be.ugent.rml.term.Term;
 
-public class RmlMapping {
+public class RmlMapper {
 
-	static String mappingFilePath = "mapping.ttl";
+	static String mappingDefinition = "mapping.ttl";
 
-	public void executeRmlMapping(String rmlOutputFilePath, String xmlFilePath) {
+	public String executeRmlMapping(String xmlSourceDocument) {
 
 		// mapping file that needs to be executed
 		String userDirectory = System.getProperty("user.dir");
-		File mappingFile = new File(userDirectory + "\\" + mappingFilePath);
+		File mappingFile = new File(userDirectory + "\\" + mappingDefinition);
 		try {
 
-			URL resource = this.getClass().getClassLoader().getResource(mappingFilePath);
+			URL resource = this.getClass().getClassLoader().getResource(mappingDefinition);
 			InputStream mappingStream = resource.openStream();
-
-			// Get the mapping string stream
-			// InputStream mappingStream = new FileInputStream(mappingFile);
 
 			// Load the mapping in a QuadStore
 			QuadStore rmlStore = QuadStoreFactory.read(mappingStream);
 
+			//Get all the triples which contain the rml:source and placeholder as predicate and object, respectively
 			Term predicate = new NamedNode("http://semweb.mmlab.be/ns/rml#source");
 			Term object = new Literal("${XMLFileToMap}");
 
-			List<Quad> quads = rmlStore.getQuads(null, predicate, object);
+			List<Quad> sourceQuads = rmlStore.getQuads(null, predicate, object);
 			List<Term> subjects = new ArrayList<Term>();
-			for (Quad quad : quads) {
+			for (Quad quad : sourceQuads) {
 				subjects.add(quad.getSubject());
 			}
 
 			rmlStore.removeQuads(null, predicate, object);
 
-			Term newObject = new Literal(xmlFilePath);
+			Term newObject = new Literal(xmlSourceDocument);
 			for (Term subject : subjects) {
 				rmlStore.addQuad(subject, predicate, newObject);
 			}
@@ -75,18 +73,17 @@ public class RmlMapping {
 					Utils.getBaseDirectiveTurtle(mappingStream));
 
 			// Execute the mapping
-			QuadStore result = executor.execute(null);
+			QuadStore mappedQuads = executor.execute(null);
+						
+			// Return the result as a turtle string
+			Writer sW = new StringWriter();
+			mappedQuads.write(sW, "turtle");
+			String result = sW.toString();
 
-			// Output the result
-			File outFile = new File(rmlOutputFilePath);
-			FileWriter fw = new FileWriter(outFile);
-			BufferedWriter out = new BufferedWriter(fw);
-			result.write(out, "turtle");
-
-			out.flush();
-			out.close();
+			return result;
 		} catch (Exception e) {
-			System.out.println("Error happend" + e.toString());
+			System.out.println("An error happend while executing the RML mapping" + e.toString());
+			return "";
 		}
 	}
 }
