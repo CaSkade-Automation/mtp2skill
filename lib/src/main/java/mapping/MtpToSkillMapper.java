@@ -1,16 +1,24 @@
 package mapping;
 
-import org.jline.utils.InputStreamReader;
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
-
-import javax.xml.xpath.*;
-import javax.xml.parsers.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.stream.Collectors;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 
 public class MtpToSkillMapper {
@@ -54,7 +62,7 @@ public class MtpToSkillMapper {
 		try {
 			builder = domFactory.newDocumentBuilder();
 			doc = builder.parse(mtpFilePath);
-		} catch (SAXException | IOException | ParserConfigurationException e) {
+		} catch (ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
 

@@ -3,18 +3,14 @@ package rest_api;
 import static spark.Spark.*;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
 import javax.servlet.MultipartConfigElement;
-import javax.servlet.ServletException;
 import javax.servlet.http.Part;
 
 import mapping.MtpToSkillMapper;
-import spark.Request;
 
 public class RestApi {
 
