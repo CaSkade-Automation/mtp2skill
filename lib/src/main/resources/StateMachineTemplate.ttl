@@ -1,148 +1,242 @@
-@prefix : <http://www.hsu-ifa.de/ontologies/DINEN61360#> .
 @prefix Cap: <http://www.hsu-ifa.de/ontologies/capability-model#> .
-@prefix MTPOWL: <http://www.hsu-ifa.de/ontologies/capability-example#> .
-@prefix DIN8580: <http://www.hsu-ifa.de/ontologies/DIN8580#> .
-@prefix OPS: <http://www.hsu-ifa.de/ontologies/OPS-KnowledgeBase#> .
 @prefix OpcUa: <http://www.hsu-ifa.de/ontologies/OpcUa#> .
 @prefix VDI2206: <http://www.hsu-ifa.de/ontologies/VDI2206#> .
 @prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#> .
-@prefix WADL1: <http://www.hsu-ifa.de/ontologies/WADL#> .
-@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
-@prefix gn: <http://www.geonames.org/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
-@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
-@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
-@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
-@prefix untitled-ontology-39: <http://www.semanticweb.org/hildebrandt/ontologies/2017/11/untitled-ontology-39#> .
-@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#>.
 @prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
+@prefix DINEN61360:<http://www.hsu-ifa.de/ontologies/DINEN61360#>.
 
 MTPOWL:_Replace_StateMachine a <http://www.hsu-ifa.de/ontologies/ISA-TR88#StateMachine> .
 
 MTPOWL:_Replace_StateMachine_Aborting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Aborting_State_Complete .
+MTPOWL:_Replace_Aborting_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Aborting.
+MTPOWL:_Replace_StateMachine_Aborting DINEN61360:has_Data_Element MTPOWL:_Replace_Aborting_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Clearing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clearing>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Clearing_State_Complete .
+	
+#Das MTP hat kein Clearing. Daher muss der Zustand auch nicht abfragbar sein
+#MTPOWL:_Replace_Clearing_CurrentState_DE a DINEN61360:Data_Element; 
+#	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+#	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Clearing.
+#MTPOWL:_Replace_StateMachine_Clearing DINEN61360:has_Data_Element MTPOWL:_Replace_Clearing_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Complete>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Reset_Command, MTPOWL:_Replace_StateMachine_Stop_Command .
+MTPOWL:_Replace_Complete_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Complete.
+MTPOWL:_Replace_StateMachine_Complete DINEN61360:has_Data_Element MTPOWL:_Replace_Complete_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Completing a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Completing>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Completing_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
+MTPOWL:_Replace_Completing_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Completing.
+MTPOWL:_Replace_StateMachine_Completing DINEN61360:has_Data_Element MTPOWL:_Replace_Completing_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Execute a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Execute>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Execute_State_Complete, MTPOWL:_Replace_StateMachine_Hold_Command,
     MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Suspend_Command .
-
+MTPOWL:_Replace_Execute_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Execute.
+MTPOWL:_Replace_StateMachine_Execute DINEN61360:has_Data_Element MTPOWL:_Replace_Execute_CurrentState_DE.
 MTPOWL:_Replace_StateMachine_Holding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Holding>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Holding_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
+MTPOWL:_Replace_Holding_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Holding.
+MTPOWL:_Replace_StateMachine_Holding DINEN61360:has_Data_Element MTPOWL:_Replace_Holding_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Resetting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Resetting>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Resetting_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
+MTPOWL:_Replace_Resetting_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Resetting.
+MTPOWL:_Replace_StateMachine_Resetting DINEN61360:has_Data_Element MTPOWL:_Replace_Resetting_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Starting a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Starting>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Starting_State_Complete, MTPOWL:_Replace_StateMachine_Stop_Command .
+MTPOWL:_Replace_Starting_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Starting.
+MTPOWL:_Replace_StateMachine_Starting DINEN61360:has_Data_Element MTPOWL:_Replace_Starting_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Stopping a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopping>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Stopping_State_Complete .
+MTPOWL:_Replace_Stopping_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Stopping.
+MTPOWL:_Replace_StateMachine_Stopping DINEN61360:has_Data_Element MTPOWL:_Replace_Stopping_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Suspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspending>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Suspending_State_Complete .
+MTPOWL:_Replace_Suspending_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Pausing.
+MTPOWL:_Replace_StateMachine_Suspending DINEN61360:has_Data_Element MTPOWL:_Replace_Suspending_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Unholding a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unholding>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Unholding_State_Complete .
+MTPOWL:_Replace_Unholding_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Unholding.
+MTPOWL:_Replace_StateMachine_Unholding DINEN61360:has_Data_Element MTPOWL:_Replace_Unholding_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Unsuspending a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspending>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Unsuspending_State_Complete .
+MTPOWL:_Replace_Unsuspending_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Resuming.
+MTPOWL:_Replace_StateMachine_Unsuspending DINEN61360:has_Data_Element MTPOWL:_Replace_Unsuspending_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Aborted a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborted>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Clear_Command .
+MTPOWL:_Replace_Aborted_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Aborted.
+MTPOWL:_Replace_StateMachine_Aborted DINEN61360:has_Data_Element MTPOWL:_Replace_Aborted_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Held a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Held>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Un_Hold_Command .
+MTPOWL:_Replace_Held_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Held.
+MTPOWL:_Replace_StateMachine_Held DINEN61360:has_Data_Element MTPOWL:_Replace_Held_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Idle a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Idle>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Start_Command, MTPOWL:_Replace_StateMachine_Stop_Command .
+MTPOWL:_Replace_Idle_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Idle.
+MTPOWL:_Replace_StateMachine_Idle DINEN61360:has_Data_Element MTPOWL:_Replace_Idle_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Stopped a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stopped>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
     MTPOWL:_Replace_StateMachine_Reset_Command .
+MTPOWL:_Replace_Stopped_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Stopped.
+MTPOWL:_Replace_StateMachine_Stopped DINEN61360:has_Data_Element MTPOWL:_Replace_Stopped_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Suspended a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspended>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#State_is_connected_with_Transition> MTPOWL:_Replace_StateMachine_Abort_Command,
-    MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Unsuspend_Command .
+  MTPOWL:_Replace_StateMachine_Stop_Command, MTPOWL:_Replace_StateMachine_Unsuspend_Command .
+
+MTPOWL:_Replace_Suspended_CurrentState_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:CurrentStateOutput_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_CurrentState_Paused.
+MTPOWL:_Replace_StateMachine_Suspended DINEN61360:has_Data_Element MTPOWL:_Replace_Suspended_CurrentState_DE.
 
 MTPOWL:_Replace_StateMachine_Abort_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Abort_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Aborting .
 
+MTPOWL:_Replace_Abort_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Abort.
+MTPOWL:_Replace_StateMachine_Abort_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Abort_Command_DE.
+
 MTPOWL:_Replace_StateMachine_Clear_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Clear_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Clearing .
+MTPOWL:_Replace_Clear_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Reset. #Hier wird auf Reset geschaltet, weil der Clear Command nicht im MTP Zustandsautomat vorhanden ist.
+MTPOWL:_Replace_StateMachine_Clear_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Clear_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Hold_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Holding .
+MTPOWL:_Replace_Hold_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Hold.
+MTPOWL:_Replace_StateMachine_Hold_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Hold_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Reset_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Reset_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Resetting .
+MTPOWL:_Replace_Reset_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Reset.
+MTPOWL:_Replace_StateMachine_Reset_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Reset_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Start_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Start_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Starting .
+MTPOWL:_Replace_Start_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Start.
+MTPOWL:_Replace_StateMachine_Start_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Start_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Stop_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Stop_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Stopping .
+MTPOWL:_Replace_Stop_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Stop.
+MTPOWL:_Replace_StateMachine_Stop_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Stop_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Suspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Suspend_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Suspending .
+MTPOWL:_Replace_Suspend_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Pause.
+MTPOWL:_Replace_StateMachine_Suspend_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Suspend_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Un_Hold_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Un-Hold_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Unholding .
+MTPOWL:_Replace_Un_Hold_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Un_Hold.
+MTPOWL:_Replace_StateMachine_Un_Hold_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Un_Hold_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Unsuspend_Command a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Unsuspend_Command>,
     owl:NamedIndividual;
   <http://www.hsu-ifa.de/ontologies/ISA-TR88#Transition_is_connected_with_State> MTPOWL:_Replace_StateMachine_Unsuspending .
+MTPOWL:_Replace_Unsuspend_Command_DE a DINEN61360:Data_Element; 
+	DINEN61360:has_Type_Description Cap:SkillCommandVariable_TD;
+	DINEN61360:has_Instance_Description Cap:MTP_Command_Resume.
+MTPOWL:_Replace_StateMachine_Unsuspend_Command DINEN61360:has_Data_Element MTPOWL:_Replace_Unsuspend_Command_DE.
 
 MTPOWL:_Replace_StateMachine_Aborting_State_Complete a <http://www.hsu-ifa.de/ontologies/ISA-TR88#Aborting_State_Complete>,
     owl:NamedIndividual;

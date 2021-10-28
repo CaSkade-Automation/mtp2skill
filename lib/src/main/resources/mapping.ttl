@@ -1,13 +1,11 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#>.
 @prefix rml: <http://semweb.mmlab.be/ns/rml#>.
-@prefix crml:   <http://semweb.mmlab.be/ns/crml#>.
 @prefix ql: <http://semweb.mmlab.be/ns/ql#>.
-@prefix ex: <http://ex.com/>.
 @prefix VDI2206: <http://www.hsu-ifa.de/ontologies/VDI2206#>.
 @prefix VDI3682: <http://www.hsu-ifa.de/ontologies/VDI3682#>.
 @prefix DINEN61360: <http://www.hsu-ifa.de/ontologies/DINEN61360#>.
 @prefix OPCUA: <http://www.hsu-ifa.de/ontologies/OpcUa#>.
-@prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA88-TR#>.
+@prefix ISA88: <http://www.hsu-ifa.de/ontologies/ISA-TR88#>.
 @prefix MTPOWL:<http://www.hsu-ifa.de/ontologies/MTPOWL#>.
 @prefix Cap: <http://www.hsu-ifa.de/ontologies/capability-model#> .
 @base <http://example.com/base>.
