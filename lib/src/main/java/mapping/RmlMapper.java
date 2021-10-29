@@ -73,7 +73,7 @@ public class RmlMapper {
 					Utils.getBaseDirectiveTurtle(mappingStream));
 
 			// Execute the mapping
-			QuadStore mappedQuads = executor.execute(null);
+			QuadStore mappedQuads = executor.executeV5(null).get(new NamedNode("rmlmapper://default.store"));
 						
 			// Return the result as a turtle string
 			Writer sW = new StringWriter();

@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>de.hsu-hh.ifa.mtp-mapping</groupId>
-		<artifactId>parent</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<groupId>de.hsu-hh.aut.mtp2skill</groupId>
+		<artifactId>mtp2skill-parent</artifactId>
+		<version>1.0.0</version>
 	</parent>
 
-	<artifactId>lib</artifactId>
-	<name>MTP-to-Skill</name>
+	<artifactId>mtp2skill-lib</artifactId>
+	<name>MTP-to-Skill Library</name>
 
 	<build>
 		<plugins>
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>be.ugent.rml</groupId>
 			<artifactId>rmlmapper</artifactId>
-			<version>4.9.1</version>
+			<version>4.11.0</version>
 		</dependency>
 	</dependencies>
 </project>
