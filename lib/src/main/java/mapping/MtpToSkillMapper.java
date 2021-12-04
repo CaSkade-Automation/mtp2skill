@@ -32,7 +32,10 @@ public class MtpToSkillMapper {
 	 * @return Skill ontology in turtle syntax
 	 */
 	public String executeMapping(String mtpFilePath) {
-
+		
+		System.out.println("Started mapping of " + mtpFilePath);
+		long start = System.currentTimeMillis();
+		
 		// 1. Execute RML mapping
 		RmlMapper rmlMapper = new RmlMapper();
 		String rmlMappingResult = rmlMapper.executeRmlMapping(mtpFilePath);
@@ -42,6 +45,10 @@ public class MtpToSkillMapper {
 
 		// 3. Combine rml mapping result with state machines
 		String mappingResult = rmlMappingResult + "\n" + stateMachines;
+		
+		long end = System.currentTimeMillis();
+		long mappingDuration = (end - start) / 1000;
+		System.out.println("Finished mapping in " + mappingDuration + " seconds.");
 		return mappingResult;
 	}
 
